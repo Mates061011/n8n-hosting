@@ -18,3 +18,20 @@ services:
         value: "0.0.0.0"
       - key: N8N_PORT
         value: "5678"
+        # >>>>> DATABASE CONFIG
+      - key: DB_TYPE
+        value: postgres
+      - key: DB_POSTGRESDB_HOST
+        value: dpg-d20v4tp5pdvs739gbr7g-a
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        value: n8n_postgresql_htud
+      - key: DB_POSTGRESDB_USER
+        value: n8n_postgresql_htud_user
+      - key: DB_POSTGRESDB_PASSWORD
+        value: NfNOUUBJSeWSlJq6r4UhkTsTUmNE3MSg
+      - key: DB_POSTGRESDB_SSL_CA
+        fromDatabase:
+          name: n8n-db
+          property: caCertificate
